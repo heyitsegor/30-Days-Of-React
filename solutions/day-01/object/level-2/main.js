@@ -80,7 +80,21 @@ console.log(`Logged-in users count: ${loggedin_users}, users having greater than
 //MERN stands for MongoDB, Express, React, Node.
 
 for (user of users_keys) {
-    if (users[user].skills.hasOwnProperty('MongoDB')) {
+    if (users[user].skills.includes('MongoDB') && users[user].skills.includes('Express') && users[user].skills.includes('React') && users[user].skills.includes('Node')) {
         console.log(user)
     }
 }
+
+users.Egor = {
+    email: 'hey.egor@icloud.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Python'],
+    age: 19,
+    isLoggedIn: true,
+    points: 50
+}
+
+let users_values = Object.values(users)
+
+console.log(users_keys)
+console.log(users_values)
+
